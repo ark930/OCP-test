@@ -1,7 +1,7 @@
 --多表插入
 
 SET ECHO OFF     
-set feedback off 
+SET feedback off 
 
 DROP TABLE S_CUST;
 DROP TABLE M_CUST;
