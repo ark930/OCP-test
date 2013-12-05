@@ -1,0 +1,15 @@
+DROP TABLE digits CASCADE CONSTRAINTS;
+
+CREATE TABLE digits (
+	id NUMBER(2),
+	description VARCHAR2(15)
+);
+
+INSERT INTO digits VALUES (1, 'ONE');
+UPDATE digits SET description = 'TWO' WHERE id = 1;
+INSERT INTO digits VALUES (2, 'TWO');
+COMMIT;
+
+DELETE FROM digits;
+SELECT description FROM digits 
+	VERSIONS BETWEEN TIMESTAMP MINVALUE AND MAXVALUE;
